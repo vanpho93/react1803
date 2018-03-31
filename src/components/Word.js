@@ -5,7 +5,9 @@ export class Word extends Component {
         const { en, vn, isMemorized } = this.props.wordInfo;
         return (
             <div>
-                <h3 className="red">{en}</h3>
+                <h3 className={isMemorized ? 'green' : 'red'}>
+                    {en}
+                </h3>
                 <p>{vn}</p>
             </div>
         );

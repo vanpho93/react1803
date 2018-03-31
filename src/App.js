@@ -5,12 +5,15 @@ import './App.css';
 
 export class App extends Component {
   render() {
+    const arr = [
+      { en: 'One', vn: 'Mot', isMemorized: true },
+      { en: 'Two', vn: 'Hai', isMemorized: false },
+      { en: 'Three', vn: 'Ba', isMemorized: false },
+      { en: 'Four', vn: 'Bon', isMemorized: true }
+    ];
     return (
       <div>
-        <Word wordInfo={{ en: 'One', vn: 'Mot', isMemorized: true }} />
-        <Word wordInfo={{ en: 'Two', vn: 'Hai', isMemorized: false }} />
-        <Word wordInfo={{ en: 'Three', vn: 'Ba', isMemorized: false }} />
-        <Word wordInfo={{ en: 'Four', vn: 'Bon', isMemorized: true }} />
+        { arr.map(w => <Word key={w.en} wordInfo={w} />) }
       </div>
     );
   }
