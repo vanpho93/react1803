@@ -8,7 +8,7 @@ export class App extends Component {
     return (
       <div>
         <Word en="One" vn="Mot" />
-        <Word en="Two" vn="Hai"></Word>
+        <Word en="Two" vn="Hai" />
       </div>
     );
   }
@@ -16,10 +16,11 @@ export class App extends Component {
 
 class Word extends Component {
   render() {
+    const { en, vn } = this.props;
     return (
       <div>
-        <h3>{this.props.en}</h3>
-        <p>{this.props.vn}</p>
+        <h3>{en}</h3>
+        <p>{vn}</p>
       </div>
     );
   }
