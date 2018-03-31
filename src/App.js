@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+
+import { Word } from './components/Word';
 import logo from './logo.svg';
 import './App.css';
 
@@ -9,18 +11,6 @@ export class App extends Component {
       <div>
         <Word en="One" vn="Mot" />
         <Word en="Two" vn="Hai" />
-      </div>
-    );
-  }
-}
-
-class Word extends Component {
-  render() {
-    const { en, vn } = this.props;
-    return (
-      <div>
-        <h3>{en}</h3>
-        <p>{vn}</p>
       </div>
     );
   }
